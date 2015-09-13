@@ -11817,6 +11817,34 @@
         : baseSum(collection, iteratee);
     }
 
+    // ¤guten
+    function insert(array, index, value) {
+      array.splice(index, 0, value)
+    }
+    lodash.insert = insert;
+
+    function deleteAt(array, index) {
+      return array.splice(index, 1)[0]
+    }
+    lodash.deleteAt = deleteAt;
+
+    function swap(array, i, j) {
+      var tmp = array[j]
+      array[j] = array[i]
+      array[i] = tmp
+    }
+    lodash.swap = swap;
+
+    function moveTo(array, i, j) {
+      if (i === j) {
+        return array
+      }
+      var value = deleteAt(array, i)
+      insert(array, j, value)
+      return array
+    }
+    lodash.moveTo = moveTo;
+
     /*------------------------------------------------------------------------*/
 
     // Ensure wrappers are instances of `baseLodash`.
