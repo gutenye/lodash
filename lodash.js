@@ -11823,11 +11823,6 @@
     }
     lodash.insert = insert;
 
-    function deleteAt(array, index) {
-      return array.splice(index, 1)[0]
-    }
-    lodash.deleteAt = deleteAt;
-
     function swap(array, i, j) {
       var tmp = array[j]
       array[j] = array[i]
@@ -11839,7 +11834,7 @@
       if (i === j) {
         return array
       }
-      var value = deleteAt(array, i)
+      var value = _.pullAt(array, i)[0]
       insert(array, j, value)
       return array
     }
