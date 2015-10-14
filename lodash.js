@@ -11840,6 +11840,18 @@
     }
     lodash.moveTo = moveTo;
 
+
+    // _.mousestroke(e) -> "left" right middle
+    var _buttonMap = {
+      0: "left",
+      1: "middle",
+      2: "right"
+    }
+    function mousestroke(e) {
+      return _buttonMap[e.button]
+    }
+    lodash.mousestroke = mousestroke
+
     // _.keystroke(event) -> "a" "ctrl-a" "ctrl-alt-shift-cmd-a"
     var keystrokes = {
       8: "backspace",
