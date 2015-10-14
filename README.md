@@ -4,6 +4,7 @@ The idea is use semantic words as much as possible, for example, `array.insert(i
 
 Forked from [lodash](https://github.com/lodash/lodash), with additions:
 
+- `_.keystroke(event)    -> "a" "ctrl-a" "ctrl-alt-shift-cmd-a" `
 - `_.deleteAt(array, index)`
 - `_.insert(array, index, value)`
 - `_.swap(array, i, j)`        e.g.: `[0, 1, 2, 3]  swap(0, 3)   -> [3, 1, 2, 0]`
